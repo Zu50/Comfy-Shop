@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Shop | online store</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons8-cart-100.png">
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__wrap">
+        <!-- navbar -->
+        <div>
+          <nav id="main-nav" class="tabs">
+            <a class="tabs__btn tabs__btn-active" href="#tab-1">Home</a>
+            <a class="tabs__btn" href="#tab-2" id="products">Products</a>
+            <a class="tabs__btn" href="#tab-3">About</a>
+          </nav>
+        </div>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <img class="header__logo" src="./images/logo.png" alt="Logo" />
+
+        <div class="header__cart-btn">
+          <span class="header__cart-items">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main" id="main-page">
+      <!-- tabs intro  1 -->
+      <div class="main__tabs-content" id="tab-1">
+        <section class="intro">
+          <div class="intro__wrap">
+            <h1 class="intro__title">rest, relax, unwind</h1>
+            <h3 class="intro__text">Embrace your choices - we do</h3>
+            <a href="#" class="intro__btn tabs__btn">shop now</a>
+          </div>
+        </section>
+
+        <section class="featured">
+          <h2 class="featured__title">
+            <span class="featured__span">/</span>featured
+          </h2>
+          <ul class="featured__list"></ul>
+
+          <a href="#" class="featured__btn tabs__btn">all products</a>
+        </section>
+      </div>
+
+      <!-- tabs content  2 -->
+      <div class="main__tabs-content" id="tab-2">
+        <div class="main__padge">
+          <h3 class="main__title">
+            Home<span class="main__span">/</span>Products
+          </h3>
+        </div>
+        <section class="products">
+          <div class="filters">
+            <div class="filters__container">
+              <form class="form">
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="Search..."
+                />
+              </form>
+
+              <h4 class="brands">Company</h4>
+              <div class="brands__btns">
+                <button class="brands__btn" data-filter="all">all</button>
+                <button class="brands__btn" data-filter="ikea">Ikea</button>
+                <button class="brands__btn" data-filter="marcos">Marcos</button>
+                <button class="brands__btn" data-filter="caressa">
+                  Caressa
+                </button>
+                <button class="brands__btn" data-filter="liddy">Liddy</button>
+              </div>
+
+              <h4 class="price">Price</h4>
+              <form class="form">
+                <input
+                  type="range"
+                  class="form__range"
+                  min="25"
+                  value="25"
+                  max="210"
+                />
+              </form>
+
+              <p class="price__value">Value : $25</p>
+            </div>
+          </div>
+
+          <ul class="products__list"></ul>
+        </section>
+      </div>
+
+      <!-- tabs about 3 -->
+      <div class="main__tabs-content" id="tab-3">
+        <div class="main__padge">
+          <h3 class="main__title">
+            Home<span class="main__span">/</span>About
+          </h3>
+        </div>
+
+        <section class="about">
+          <h2 class="about__title">
+            <span class="about__span">/</span> Our History
+          </h2>
+
+          <p class="about__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+            accusantium sapiente tempora sed dolore esse deserunt eaque
+            excepturi, delectus error accusamus vel eligendi, omnis beatae.
+            Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
+            dolore, obcaecati incidunt sequi blanditiis est exercitationem
+            molestiae delectus saepe odio eligendi modi porro eaque in libero
+            minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
+            ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
+            similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
+            iste.
+          </p>
+        </section>
+      </div>
+
+      <!-- cart -->
+      <section class="cart-overlay">
+        <div class="cart">
+          <button class="cart__close-btn"></button>
+          <div>
+            <h3 class="cart__title">Your Bag</h3>
+          </div>
+
+          <div class="cart__content"></div>
+
+          <div class="cart__footer">
+            <h3 class="cart__title">
+              Total : $<span class="cart__total"></span>
+            </h3>
+            <button class="cart__checkout-btn">checkout</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/router.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
